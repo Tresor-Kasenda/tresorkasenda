@@ -1,0 +1,29 @@
+---
+const { size = 'medium', rounded = 'md', label = 'Button', href = '' } = Astro.props;
+
+const sizeClasses: any = {
+    small: 'py-1 px-2 text-sm',
+    medium: 'py-2 px-4 text-base',
+    large: 'py-3 px-6 text-lg',
+};
+
+const roundedClass: any = {
+    sm: 'rounded-sm',
+    md: 'rounded-md',
+    lg: 'rounded-lg',
+    xl : 'rounded-xl',
+    full: 'rounded-full',
+}
+
+const commonClasses = `bg-blue-500 text-white ${sizeClasses[size]} ${roundedClass[rounded]}`;
+---
+
+{href ? (
+    <a href={href} class={commonClasses}>
+        {label}
+    </a>
+) : (
+    <button class={commonClasses}>
+        {label}
+    </button>
+)}

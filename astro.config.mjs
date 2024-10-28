@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig, squooshImageService } from 'astro/config';
+import { defineConfig } from 'astro/config';
 
 import tailwind from '@astrojs/tailwind';
 import service from 'astro/assets/services/squoosh';
